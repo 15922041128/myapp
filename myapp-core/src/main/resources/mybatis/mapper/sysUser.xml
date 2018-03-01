@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wode.myapp.core.mapper.SysUserMapper">
+	
+	<select id="queryAll" resultType="com.wode.myapp.base.bean.SysUser">
+		select * from sysUser
+	</select>
+	
+	<insert id="add" parameterType="com.wode.myapp.base.bean.SysUser">
+		insert into sysUser(userName, password) values(#{userName}, #{password})
+	</insert>
+	
+</mapper>
